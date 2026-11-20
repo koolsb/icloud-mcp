@@ -1,4 +1,4 @@
-# koolsb fork: container image for running icloud-mcp behind an authenticating
+# Container image for running icloud-mcp behind an authenticating
 # MCP gateway (Streamable HTTP, bearer token, hard read-only by default).
 FROM node:22-alpine
 

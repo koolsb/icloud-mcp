@@ -1,7 +1,7 @@
-# koolsb/icloud-mcp — fork notes
+# Fork notes
 
 Fork of [adamzaidi/icloud-mcp](https://github.com/adamzaidi/icloud-mcp), reviewed at
-upstream `129c718` (v2.8.0), packaged as `ghcr.io/koolsb/icloud-mcp` to run in a home
+upstream `129c718` (v2.8.0), packaged as a container image (this repository's GHCR package) to run in a home
 Kubernetes cluster behind an Authentik-authenticated MCP gateway.
 
 ## Changes from upstream

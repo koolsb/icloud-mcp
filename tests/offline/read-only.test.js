@@ -1,4 +1,4 @@
-// koolsb fork: ICLOUD_MCP_READ_ONLY hard read-only mode.
+// ICLOUD_MCP_READ_ONLY hard read-only mode.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { mkdtempSync } from 'fs';
