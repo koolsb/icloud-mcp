@@ -137,7 +137,7 @@ test('full is the default and remote-safe exposes an exact list', () => {
   for (const name of ['save_draft', 'search_emails', 'create_event', 'update_reminder', 'bulk_create_events', 'bulk_update_events']) {
     assert.equal(REMOTE_SAFE.includes(name), true, name);
   }
-  assert.throws(() => resolveToolProfile({ ICLOUD_MCP_TOOL_PROFILE: 'yolo' }), /must be full or remote-safe/);
+  assert.throws(() => resolveToolProfile({ ICLOUD_MCP_TOOL_PROFILE: 'yolo' }), /must be full, remote-safe, or read-only/);
 });
 
 test('remote-safe forces dryRun on remaining bulk tools unless allowed', async () => {
@@ -326,5 +326,5 @@ test('stdio exposes the exact list for each profile and rejects hidden tools', a
 
   const invalid = await runServer({ ICLOUD_MCP_TOOL_PROFILE: 'yolo' });
   assert.notEqual(invalid.code, 0);
-  assert.match(invalid.stderr, /ICLOUD_MCP_TOOL_PROFILE must be full or remote-safe/);
+  assert.match(invalid.stderr, /ICLOUD_MCP_TOOL_PROFILE must be full, remote-safe, or read-only/);
 });

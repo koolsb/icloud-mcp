@@ -1,0 +1,11 @@
+.git
+.github
+node_modules
+tests
+docs
+*.md
+!package.json
+.mcp.json*
+run-digest.js
+mcp-call.mjs
+!package-lock.json
